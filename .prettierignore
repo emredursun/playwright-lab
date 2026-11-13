@@ -1,0 +1,5 @@
+# Generated files (the format scripts list the project paths explicitly)
+package-lock.json
+playwright-report/
+test-results/
+blob-report/

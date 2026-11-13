@@ -1,0 +1,26 @@
+{
+  // Type-check settings for the Playwright tests and config.
+  // Playwright transpiles the TypeScript itself, so nothing is emitted here.
+  // The lessons have their own config in course/tsconfig.json.
+  "compilerOptions": {
+    "target": "ES2024",
+    "lib": ["ES2024", "ESNext.Collection", "DOM", "DOM.Iterable"],
+    // "preserve" + "bundler": the right pairing when a tool (Playwright) loads the files
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noEmit": true,
+    "verbatimModuleSyntax": true,
+    // Playwright accepts enums and parameter properties, but this repo keeps
+    // to type-stripping-compatible syntax everywhere for consistency.
+    "erasableSyntaxOnly": true,
+    "skipLibCheck": true,
+    "types": ["node"]
+  },
+  "include": ["playwright.config.ts", "tests/**/*.ts"]
+}

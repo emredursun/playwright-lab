@@ -1,0 +1,35 @@
+{
+  // Debug configurations. Set a breakpoint, open a file and press F5.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug current lesson file",
+      "type": "node",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Debug current lesson tests (node:test)",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": ["--test", "--test-reporter=spec"],
+      "program": "${file}",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Debug current Playwright test (Chromium, headed)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/@playwright/test/cli.js",
+      "args": ["test", "${relativeFile}", "--project=chromium", "--headed", "--workers=1"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}

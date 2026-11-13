@@ -2,11 +2,20 @@
   "name": "playwright-lab",
   "version": "1.0.0",
   "private": true,
-  "description": "Personal workspace for practicing Playwright Test best practices",
-  "keywords": ["playwright", "e2e", "testing", "typescript"],
+  "description": "Playwright Test learning lab with a hands-on JavaScript and TypeScript fundamentals course",
+  "keywords": [
+    "playwright",
+    "e2e",
+    "testing",
+    "typescript",
+    "javascript",
+    "course"
+  ],
   "author": "Emre Dursun",
-  "license": "ISC",
-  "engines": { "node": ">=22" },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.18"
+  },
   "scripts": {
     "test": "playwright test",
     "test:chromium": "playwright test --project=chromium",
@@ -15,10 +24,30 @@
     "test:debug": "playwright test --debug",
     "report": "playwright show-report",
     "codegen": "playwright codegen",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc -p tsconfig.json",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write course tests .vscode .github/workflows/playwright.yml .gitlab-ci.yml package.json tsconfig.json playwright.config.ts eslint.config.mjs .prettierrc.json README.md",
+    "format:check": "prettier --check course tests .vscode .github/workflows/playwright.yml .gitlab-ci.yml package.json tsconfig.json playwright.config.ts eslint.config.mjs .prettierrc.json README.md",
+    "course:check": "node course/scripts/check.js",
+    "course:progress": "node course/scripts/progress.js",
+    "course:exercises": "node --test --test-reporter=spec \"course/**/exercises.{js,ts}\"",
+    "course:solutions": "node --test --test-reporter=spec \"course/**/solutions.{js,ts}\"",
+    "course:typecheck": "tsc -p course/tsconfig.json"
   },
   "devDependencies": {
-    "@playwright/test": "^1.65.0",
-    "@types/node": "^26.6.6"
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "1.65.0",
+    "@types/node": "^26.6.6",
+    "eslint": "^10.14.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-playwright": "^2.12.2",
+    "globals": "^17.14.0",
+    "prettier": "^3.10.1",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.72.2"
+  },
+  "overrides": {
+    "minimatch": "^11.0.8"
   }
 }

@@ -1,0 +1,9 @@
+# Normalize line endings so Windows, macOS and Linux contributors produce the same diffs.
+* text=auto eol=lf
+
+# Binary files: never touch line endings
+*.png binary
+*.jpg binary
+*.gif binary
+*.webm binary
+*.zip binary

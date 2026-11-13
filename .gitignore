@@ -1,7 +1,33 @@
-# Playwright
+# Dependencies
 node_modules/
+
+# Playwright
 /test-results/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
+# Environment files: keep secrets out of git, share only the example
+.env
+.env.*
+!.env.example
+
+# Your personal lesson progress (copy of course/PROGRESS.md)
+course/MY-PROGRESS.md
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editors: share only the recommended VS Code setup
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+.idea/
+*.swp
