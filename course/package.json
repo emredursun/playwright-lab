@@ -1,0 +1,17 @@
+{
+  "name": "playwright-lab-course",
+  "private": true,
+  "description": "JavaScript and TypeScript fundamentals lessons with runnable examples and exercises",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "check": "node scripts/check.js",
+    "progress": "node scripts/progress.js",
+    "exercises": "node --test --test-reporter=spec \"**/exercises.{js,ts}\"",
+    "solutions": "node --test --test-reporter=spec \"**/solutions.{js,ts}\"",
+    "typecheck": "tsc -p tsconfig.json"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  // Editor and type-check settings for the TypeScript lessons.
+  // Node runs the .ts files directly by stripping the types, so nothing is
+  // compiled. Type-check with `npm run course:typecheck` from the repo root.
+  "compilerOptions": {
+    // Node 22 supports ES2024 (Object.groupBy, Map.groupBy, Promise.withResolvers).
+    // ESNext.Collection adds the Set methods (union, intersection, difference...).
+    // DOM is included because page.evaluate() callbacks run in the browser.
+    "target": "ES2024",
+    "lib": ["ES2024", "ESNext.Collection", "DOM"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "moduleDetection": "force",
+
+    // Strictness: the same flags we recommend for a Playwright framework.
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+
+    // Module syntax that runs unchanged under Node's type stripping.
+    // erasableSyntaxOnly is a deliberate, stricter choice: Playwright's own
+    // loader would also accept enums and parameter properties, but plain
+    // `node file.ts` would not. With this flag every file runs in both.
+    "verbatimModuleSyntax": true,
+    "erasableSyntaxOnly": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+
+    "skipLibCheck": true,
+    "types": ["node"]
+  },
+  "include": ["typescript/**/*.ts", "applied/**/*.ts"]
+}
