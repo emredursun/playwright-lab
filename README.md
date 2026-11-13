@@ -1,7 +1,6 @@
 # Playwright Lab
 
-[![GitHub CI](https://github.com/OWNER/playwright-lab/actions/workflows/playwright.yml/badge.svg)](https://github.com/OWNER/playwright-lab/actions/workflows/playwright.yml)
-[![GitLab CI](https://gitlab.com/OWNER/playwright-lab/badges/main/pipeline.svg)](https://gitlab.com/OWNER/playwright-lab/-/pipelines)
+[![CI](https://github.com/emredursun/playwright-lab/actions/workflows/playwright.yml/badge.svg?branch=main)](https://github.com/emredursun/playwright-lab/actions/workflows/playwright.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 A learning lab for [Playwright Test](https://playwright.dev) with TypeScript. It contains:
@@ -16,7 +15,7 @@ Use it to learn, as a reference while you build your own framework, or to onboar
 Requires [Node.js](https://nodejs.org) 22.18 or newer (see [`.nvmrc`](.nvmrc)).
 
 ```bash
-git clone https://github.com/OWNER/playwright-lab.git
+git clone https://github.com/emredursun/playwright-lab.git
 cd playwright-lab
 npm ci
 npx playwright install --with-deps   # downloads the browsers
