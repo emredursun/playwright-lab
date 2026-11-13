@@ -1,0 +1,46 @@
+# GitLab CI: the same checks as .github/workflows/playwright.yml.
+stages:
+  - quality
+  - e2e
+
+variables:
+  npm_config_cache: '$CI_PROJECT_DIR/.npm'
+
+default:
+  cache:
+    key:
+      files: [package-lock.json]
+    paths: [.npm/]
+  interruptible: true
+
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+quality:
+  stage: quality
+  image: node:22
+  script:
+    - npm ci
+    - npm run lint
+    - npm run format:check
+    - npm run typecheck
+    - npm run course:typecheck
+    # Only the reference solutions: the exercises are supposed to fail until solved.
+    - npm run course:solutions
+
+playwright:
+  stage: e2e
+  # The image already contains the browsers. Its version MUST match
+  # @playwright/test in package.json, which is why that dependency is pinned
+  # exactly (no ^). Update both together.
+  image: mcr.microsoft.com/playwright:v1.65.0-noble
+  script:
+    - npm ci
+    - npx playwright test
+  artifacts:
+    when: always
+    paths:
+      - playwright-report/
+    expire_in: 30 days
