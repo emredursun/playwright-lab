@@ -4,7 +4,8 @@ import { existsSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 
 export const LESSONS_ROOT = path.resolve(import.meta.dirname, '..');
-const PARTS = ['javascript', 'typescript', 'applied'];
+// Part folders are numbered so they sort in learning order.
+const PARTS = ['01-javascript', '02-typescript', '03-applied'];
 const LESSON_FOLDER = /^(\d{2})-(.+)$/;
 
 /**
@@ -19,7 +20,9 @@ export function findLessons() {
       .filter((entry) => entry.isDirectory() && LESSON_FOLDER.test(entry.name))
       .map((entry) => {
         const [, number, name] = LESSON_FOLDER.exec(entry.name) ?? [];
-        return { number, name, part, dir: path.join(partDir, entry.name) };
+        // Report the part without its number prefix, e.g. "javascript".
+        const label = part.replace(LESSON_FOLDER, '$2');
+        return { number, name, part: label, dir: path.join(partDir, entry.name) };
       });
   }).toSorted((a, b) => a.number.localeCompare(b.number));
 }

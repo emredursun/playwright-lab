@@ -22,7 +22,7 @@ npm ci
 npx playwright install --with-deps   # downloads the browsers
 
 npm test                             # run the Playwright tests
-node course/javascript/01-variables-and-constants/lesson.js   # start the course
+node course/01-javascript/01-variables-and-constants/lesson.js   # start the course
 ```
 
 Then follow the [course README](course/README.md).
@@ -31,10 +31,10 @@ Then follow the [course README](course/README.md).
 
 ```text
 .
-├── course/                # JS & TS fundamentals course
-│   ├── javascript/         # Part 1: lessons 01–16
-│   ├── typescript/         # Part 2: lessons 17–20
-│   ├── applied/            # Part 3: testing, Node, Playwright capstone (21–23)
+├── course/                 # JS & TS fundamentals course
+│   ├── 01-javascript/      # Part 1: lessons 01–16
+│   ├── 02-typescript/      # Part 2: lessons 17–20
+│   ├── 03-applied/         # Part 3: testing, Node, Playwright capstone (21–23)
 │   └── scripts/            # progress and per-lesson check helpers
 ├── tests/                  # Playwright tests (capstone reference implementation)
 ├── playwright.config.ts    # Playwright configuration

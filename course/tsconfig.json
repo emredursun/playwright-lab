@@ -33,5 +33,5 @@
     "skipLibCheck": true,
     "types": ["node"]
   },
-  "include": ["typescript/**/*.ts", "applied/**/*.ts"]
+  "include": ["02-typescript/**/*.ts", "03-applied/**/*.ts"]
 }

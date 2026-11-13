@@ -18,7 +18,7 @@ The course teaches **current best practice only**. Outdated patterns appear only
 git clone <this-repo-url> playwright-lab
 cd playwright-lab
 npm ci                                   # installs TypeScript, ESLint and Playwright types
-node course/javascript/01-variables-and-constants/lesson.js
+node course/01-javascript/01-variables-and-constants/lesson.js
 ```
 
 All commands below run from the **repository root**.
@@ -27,41 +27,41 @@ All commands below run from the **repository root**.
 
 ### Part 1: JavaScript
 
-| #   | Lesson                                                             | You will learn                                                                          |
-| --- | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
-| 01  | [Variables & Constants](javascript/01-variables-and-constants/)    | `const` vs `let`, why `var` is outdated, block scope, TDZ, naming                       |
-| 02  | [Data Types & Equality](javascript/02-data-types-and-equality/)    | Primitives vs objects, `===`, truthy/falsy, `??`, `?.`, copying values                  |
-| 03  | [Strings](javascript/03-strings/)                                  | Template literals, essential methods, comparing, regex for assertions                   |
-| 04  | [Numbers, Math & Dates](javascript/04-numbers-and-math/)           | Floating point, safe parsing, `Intl.NumberFormat`, dates and time zones                 |
-| 05  | [Control Flow](javascript/05-control-flow/)                        | Guard clauses, early returns, ternaries, `switch` vs lookup objects                     |
-| 06  | [Loops & Iteration](javascript/06-loops-and-iteration/)            | `for...of`, iterating objects, generators, `forEach` pitfalls                           |
-| 07  | [Functions](javascript/07-functions/)                              | Arrows vs declarations, defaults, rest, options objects, pure functions                 |
-| 08  | [Arrays](javascript/08-arrays/)                                    | `map`/`filter`/`reduce`, immutable `toSorted`/`with`, `Object.groupBy`, async callbacks |
-| 09  | [Objects](javascript/09-objects/)                                  | Destructuring, spread, `Object.entries`, `Object.hasOwn`, deep copies                   |
-| 10  | [Scope, Closures & `this`](javascript/10-scope-closures-and-this/) | Lexical scope, closures, factories, how `this` really works                             |
-| 11  | [Classes](javascript/11-classes/)                                  | Fields, `#private`, static, composition, locator-based page objects                     |
-| 12  | [Error Handling](javascript/12-error-handling/)                    | Custom errors, `cause`, `finally`, never swallowing errors                              |
-| 13  | [Async JavaScript](javascript/13-async-javascript/)                | Event loop, `async/await`, parallel vs sequential, cancellation, wait for conditions    |
-| 14  | [Modules](javascript/14-modules/)                                  | ES modules, named exports, dynamic `import()`, npm and semver basics                    |
-| 15  | [Maps & Sets](javascript/15-maps-and-sets/)                        | When `Map` beats objects, Set operations, grouping and counting                         |
-| 16  | [Clean Code](javascript/16-clean-code/)                            | Capstone: characterize, then refactor messy code; clean tests; lint and format          |
+| #   | Lesson                                                                | You will learn                                                                          |
+| --- | --------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| 01  | [Variables & Constants](01-javascript/01-variables-and-constants/)    | `const` vs `let`, why `var` is outdated, block scope, TDZ, naming                       |
+| 02  | [Data Types & Equality](01-javascript/02-data-types-and-equality/)    | Primitives vs objects, `===`, truthy/falsy, `??`, `?.`, copying values                  |
+| 03  | [Strings](01-javascript/03-strings/)                                  | Template literals, essential methods, comparing, regex for assertions                   |
+| 04  | [Numbers, Math & Dates](01-javascript/04-numbers-and-math/)           | Floating point, safe parsing, `Intl.NumberFormat`, dates and time zones                 |
+| 05  | [Control Flow](01-javascript/05-control-flow/)                        | Guard clauses, early returns, ternaries, `switch` vs lookup objects                     |
+| 06  | [Loops & Iteration](01-javascript/06-loops-and-iteration/)            | `for...of`, iterating objects, generators, `forEach` pitfalls                           |
+| 07  | [Functions](01-javascript/07-functions/)                              | Arrows vs declarations, defaults, rest, options objects, pure functions                 |
+| 08  | [Arrays](01-javascript/08-arrays/)                                    | `map`/`filter`/`reduce`, immutable `toSorted`/`with`, `Object.groupBy`, async callbacks |
+| 09  | [Objects](01-javascript/09-objects/)                                  | Destructuring, spread, `Object.entries`, `Object.hasOwn`, deep copies                   |
+| 10  | [Scope, Closures & `this`](01-javascript/10-scope-closures-and-this/) | Lexical scope, closures, factories, how `this` really works                             |
+| 11  | [Classes](01-javascript/11-classes/)                                  | Fields, `#private`, static, composition, locator-based page objects                     |
+| 12  | [Error Handling](01-javascript/12-error-handling/)                    | Custom errors, `cause`, `finally`, never swallowing errors                              |
+| 13  | [Async JavaScript](01-javascript/13-async-javascript/)                | Event loop, `async/await`, parallel vs sequential, cancellation, wait for conditions    |
+| 14  | [Modules](01-javascript/14-modules/)                                  | ES modules, named exports, dynamic `import()`, npm and semver basics                    |
+| 15  | [Maps & Sets](01-javascript/15-maps-and-sets/)                        | When `Map` beats objects, Set operations, grouping and counting                         |
+| 16  | [Clean Code](01-javascript/16-clean-code/)                            | Capstone: characterize, then refactor messy code; clean tests; lint and format          |
 
 ### Part 2: TypeScript
 
-| #   | Lesson                                                                   | You will learn                                                                   |
-| --- | ------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
-| 17  | [TypeScript Basics](typescript/17-typescript-basics/)                    | Annotations vs inference, `unknown` vs `any`, literal types, `as const`          |
-| 18  | [Types, Interfaces & Unions](typescript/18-types-interfaces-and-unions/) | `type` vs `interface`, narrowing, discriminated unions, type guards, `satisfies` |
-| 19  | [Generics & Utility Types](typescript/19-generics-and-utility-types/)    | Generic functions, `keyof`, `Partial`/`Pick`/`Omit`/`Record`, mapped types       |
-| 20  | [TypeScript for Playwright](typescript/20-typescript-for-playwright/)    | Structural typing, typed page objects, fixtures, typed test and API data         |
+| #   | Lesson                                                                      | You will learn                                                                   |
+| --- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| 17  | [TypeScript Basics](02-typescript/17-typescript-basics/)                    | Annotations vs inference, `unknown` vs `any`, literal types, `as const`          |
+| 18  | [Types, Interfaces & Unions](02-typescript/18-types-interfaces-and-unions/) | `type` vs `interface`, narrowing, discriminated unions, type guards, `satisfies` |
+| 19  | [Generics & Utility Types](02-typescript/19-generics-and-utility-types/)    | Generic functions, `keyof`, `Partial`/`Pick`/`Omit`/`Record`, mapped types       |
+| 20  | [TypeScript for Playwright](02-typescript/20-typescript-for-playwright/)    | Structural typing, typed page objects, fixtures, typed test and API data         |
 
 ### Part 3: Applied
 
-| #   | Lesson                                                               | You will learn                                                                 |
-| --- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| 21  | [Testing Fundamentals](applied/21-testing-fundamentals/)             | Write your own tests: Arrange-Act-Assert, isolation, determinism, hooks, mocks |
-| 22  | [Node: Files, HTTP & Config](applied/22-node-files-http-and-config/) | `fetch` and JSON APIs, validating responses, `fs/promises`, `.env` config      |
-| 23  | [Playwright Capstone](applied/23-playwright-capstone/)               | Build a real framework: page objects, fixtures, auth state, test data, traces  |
+| #   | Lesson                                                                  | You will learn                                                                 |
+| --- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| 21  | [Testing Fundamentals](03-applied/21-testing-fundamentals/)             | Write your own tests: Arrange-Act-Assert, isolation, determinism, hooks, mocks |
+| 22  | [Node: Files, HTTP & Config](03-applied/22-node-files-http-and-config/) | `fetch` and JSON APIs, validating responses, `fs/promises`, `.env` config      |
+| 23  | [Playwright Capstone](03-applied/23-playwright-capstone/)               | Build a real framework: page objects, fixtures, auth state, test data, traces  |
 
 The capstone is a step-by-step guide. Its reference implementation lives in [`tests/capstone/`](../tests/capstone/).
 
@@ -92,7 +92,7 @@ One lesson per day of about 45 minutes beats a whole weekend of cramming.
 
 ```bash
 # Read and run a lesson
-node course/javascript/01-variables-and-constants/lesson.js
+node course/01-javascript/01-variables-and-constants/lesson.js
 
 # Work on the exercises of one lesson (tests fail until you solve them)
 npm run course:check -- 01
@@ -104,7 +104,7 @@ npm run course:check -- 01 --solutions
 npm run course:progress
 
 # TypeScript lessons run the same way...
-node course/typescript/17-typescript-basics/lesson.ts
+node course/02-typescript/17-typescript-basics/lesson.ts
 
 # ...and must also pass the type-checker: tests can't see a wrong type
 npm run course:typecheck
@@ -145,14 +145,14 @@ Playwright's test output follows the same idea, so this is practice for reading 
 
 Some syntax appears in early lessons before the lesson that explains it. Read along for now. Each one gets its full explanation later.
 
-| Syntax                             | Meaning                                                         | Taught in                             |
-| ---------------------------------- | --------------------------------------------------------------- | ------------------------------------- |
-| `` `Hello ${name}` ``              | Template literal: a string with values inserted                 | [03](javascript/03-strings/)          |
-| `(x) => x * 2`                     | Arrow function: a short way to write a function                 | [07](javascript/07-functions/)        |
-| `list.map((x) => x * 2)`           | Builds a new array by transforming every item                   | [08](javascript/08-arrays/)           |
-| `{ ...object }`                    | Spread: copies the properties of an object                      | [09](javascript/09-objects/)          |
-| `async` / `await`                  | Waits for an asynchronous result (like every Playwright action) | [13](javascript/13-async-javascript/) |
-| `import { test } from 'node:test'` | Loads code from another module                                  | [14](javascript/14-modules/)          |
+| Syntax                             | Meaning                                                         | Taught in                                |
+| ---------------------------------- | --------------------------------------------------------------- | ---------------------------------------- |
+| `` `Hello ${name}` ``              | Template literal: a string with values inserted                 | [03](01-javascript/03-strings/)          |
+| `(x) => x * 2`                     | Arrow function: a short way to write a function                 | [07](01-javascript/07-functions/)        |
+| `list.map((x) => x * 2)`           | Builds a new array by transforming every item                   | [08](01-javascript/08-arrays/)           |
+| `{ ...object }`                    | Spread: copies the properties of an object                      | [09](01-javascript/09-objects/)          |
+| `async` / `await`                  | Waits for an asynchronous result (like every Playwright action) | [13](01-javascript/13-async-javascript/) |
+| `import { test } from 'node:test'` | Loads code from another module                                  | [14](01-javascript/14-modules/)          |
 
 ## Found a mistake?
 
