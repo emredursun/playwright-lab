@@ -37,7 +37,7 @@ Then follow the [course README](course/README.md).
 │   └── scripts/            # progress and per-lesson check helpers
 ├── tests/                  # Playwright tests (capstone reference implementation)
 ├── playwright.config.ts    # Playwright configuration
-├── eslint.config.mjs       # ESLint flat config (typescript-eslint + eslint-plugin-playwright)
+├── eslint.config.mjs       # ESLint config (TypeScript + Playwright rules)
 ├── tsconfig.json           # type-check settings for tests/ and the config
 ├── .github/workflows/      # GitHub Actions CI
 └── .gitlab-ci.yml          # GitLab CI
